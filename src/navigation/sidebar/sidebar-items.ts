@@ -3,8 +3,6 @@ import {
   Calendar,
   ChartBar,
   CheckSquare,
-  ChefHat,
-  CircleDollarSign,
   Fingerprint,
   FolderOpen,
   Forklift,
@@ -22,10 +20,8 @@ import {
   Server,
   ShoppingBag,
   SquareArrowUpRight,
-  Store,
   UserRound,
   Users,
-  Utensils,
 } from "lucide-react";
 
 export type NavBadge = "new" | "soon";
@@ -139,18 +135,6 @@ export const sidebarItems: NavGroup[] = [
         icon: HeartPulse,
         badge: "new",
       },
-    ],
-  },
-  {
-    id: 4,
-    label: "RUNME operations",
-    items: [
-      { id: "runme-home", title: "Command center", url: "/dashboard", icon: LayoutDashboard },
-      { id: "runme-pos", title: "POS & orders", url: "/dashboard/ecommerce", icon: CircleDollarSign },
-      { id: "runme-menu", title: "Menu & QR", url: "/dashboard/qr-menu", icon: Utensils },
-      { id: "runme-kitchen", title: "Kitchen", url: "/dashboard/kitchen", icon: ChefHat },
-      { id: "runme-inventory", title: "Inventory", url: "/dashboard/inventory", icon: Store },
-      { id: "runme-customers", title: "Customers & loyalty", url: "/dashboard/crm", icon: Users },
     ],
   },
   {
