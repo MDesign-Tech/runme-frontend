@@ -1,8 +1,15 @@
 import {
   Banknote,
+  Bell,
+  BookOpen,
+  Box,
   Calendar,
   ChartBar,
   CheckSquare,
+  Clipboard,
+  Coffee,
+  Cpu,
+  CreditCard,
   Fingerprint,
   FolderOpen,
   Forklift,
@@ -15,13 +22,23 @@ import {
   Lock,
   type LucideIcon,
   Mail,
+  MapPin,
+  Megaphone,
+  Menu,
   MessageSquare,
   ReceiptText,
   Server,
+  Settings,
   ShoppingBag,
+  ShoppingCart,
+  Smartphone,
   SquareArrowUpRight,
+  Star,
+  Table,
+  Truck,
   UserRound,
   Users,
+  Zap,
 } from "lucide-react";
 
 export type NavBadge = "new" | "soon";
@@ -63,6 +80,206 @@ export interface NavGroup {
 }
 
 export const sidebarItems: NavGroup[] = [
+  {
+    id: 10,
+    label: "RUNME",
+    items: [
+      {
+        id: "runme-home",
+        title: "Dashboard",
+        url: "/runme/dashboard",
+        icon: LayoutDashboard,
+      },
+    ],
+  },
+  {
+    id: 11,
+    label: "SALES",
+    items: [
+      { id: "runme-pos", title: "POS", url: "/runme/pos", icon: ShoppingCart },
+      {
+        id: "runme-orders",
+        title: "Orders",
+        url: "/runme/orders",
+        icon: Clipboard,
+      },
+      {
+        id: "runme-delivery",
+        title: "Delivery",
+        url: "/runme/delivery",
+        icon: Truck,
+      },
+      {
+        id: "runme-payments",
+        title: "Payments",
+        url: "/runme/payments",
+        icon: CreditCard,
+      },
+    ],
+  },
+  {
+    id: 12,
+    label: "OPERATIONS",
+    items: [
+      { id: "runme-menu", title: "Menu", url: "/runme/menu", icon: Menu },
+      {
+        id: "runme-qr-menu",
+        title: "QR Menu",
+        url: "/runme/qr-menu",
+        icon: Smartphone,
+      },
+      {
+        id: "runme-tables",
+        title: "Tables",
+        url: "/runme/tables",
+        icon: Table,
+      },
+      {
+        id: "runme-reservations",
+        title: "Reservations",
+        url: "/runme/reservations",
+        icon: Calendar,
+      },
+      {
+        id: "runme-kitchen",
+        title: "Kitchen",
+        url: "/runme/kitchen",
+        icon: Coffee,
+      },
+    ],
+  },
+  {
+    id: 13,
+    label: "INVENTORY",
+    items: [
+      {
+        id: "runme-inventory-index",
+        title: "Inventory",
+        url: "/runme/inventory",
+        icon: Box,
+      },
+      {
+        id: "runme-recipes",
+        title: "Recipes",
+        url: "/runme/recipes",
+        icon: BookOpen,
+      },
+      {
+        id: "runme-suppliers",
+        title: "Suppliers",
+        url: "/runme/suppliers",
+        icon: Truck,
+      },
+      {
+        id: "runme-procurement",
+        title: "Procurement",
+        url: "/runme/procurement",
+        icon: ShoppingBag,
+      },
+    ],
+  },
+  {
+    id: 14,
+    label: "CUSTOMERS",
+    items: [
+      {
+        id: "runme-customers-index",
+        title: "Customers",
+        url: "/runme/customers",
+        icon: Users,
+      },
+      {
+        id: "runme-loyalty",
+        title: "Loyalty",
+        url: "/runme/loyalty",
+        icon: Star,
+      },
+      {
+        id: "runme-marketing",
+        title: "Marketing",
+        url: "/runme/marketing",
+        icon: Megaphone,
+      },
+      {
+        id: "runme-feedback",
+        title: "Feedback",
+        url: "/runme/feedback",
+        icon: MessageSquare,
+      },
+    ],
+  },
+  {
+    id: 15,
+    label: "BUSINESS",
+    items: [
+      {
+        id: "runme-staff",
+        title: "Staff",
+        url: "/runme/staff",
+        icon: UserRound,
+      },
+      {
+        id: "runme-accounting",
+        title: "Accounting",
+        url: "/runme/accounting",
+        icon: Banknote,
+      },
+      {
+        id: "runme-branches",
+        title: "Branches",
+        url: "/runme/branches",
+        icon: MapPin,
+      },
+    ],
+  },
+  {
+    id: 16,
+    label: "INSIGHTS",
+    items: [
+      {
+        id: "runme-analytics",
+        title: "Analytics",
+        url: "/runme/analytics",
+        icon: ChartBar,
+      },
+      {
+        id: "runme-ai",
+        title: "AI Assistant",
+        url: "/runme/ai-assistant",
+        icon: Cpu,
+      },
+      {
+        id: "runme-automations",
+        title: "Automations",
+        url: "/runme/automations",
+        icon: Zap,
+      },
+    ],
+  },
+  {
+    id: 17,
+    label: "Account & Support",
+    items: [
+      {
+        id: "runme-notifications",
+        title: "Notifications",
+        url: "/runme/notifications",
+        icon: Bell,
+      },
+      {
+        id: "runme-settings",
+        title: "Settings",
+        url: "/runme/settings",
+        icon: Settings,
+      },
+      {
+        id: "runme-help",
+        title: "Help & Support",
+        url: "/runme/help",
+        icon: MessageSquare,
+      },
+    ],
+  },
   {
     id: 1,
     label: "Dashboards",
@@ -201,10 +418,30 @@ export const sidebarItems: NavGroup[] = [
         title: "Authentication",
         icon: Fingerprint,
         subItems: [
-          { id: "auth-login-v1", title: "Login v1", url: "/auth/v1/login", newTab: true },
-          { id: "auth-login-v2", title: "Login v2", url: "/auth/v2/login", newTab: true },
-          { id: "auth-register-v1", title: "Register v1", url: "/auth/v1/register", newTab: true },
-          { id: "auth-register-v2", title: "Register v2", url: "/auth/v2/register", newTab: true },
+          {
+            id: "auth-login-v1",
+            title: "Login v1",
+            url: "/auth/v1/login",
+            newTab: true,
+          },
+          {
+            id: "auth-login-v2",
+            title: "Login v2",
+            url: "/auth/v2/login",
+            newTab: true,
+          },
+          {
+            id: "auth-register-v1",
+            title: "Register v1",
+            url: "/auth/v1/register",
+            newTab: true,
+          },
+          {
+            id: "auth-register-v2",
+            title: "Register v2",
+            url: "/auth/v2/register",
+            newTab: true,
+          },
         ],
       },
     ],
@@ -217,10 +454,22 @@ export const sidebarItems: NavGroup[] = [
         id: "legacy-dashboards",
         title: "Dashboards",
         subItems: [
-          { id: "legacy-default", title: "Default V1", url: "/dashboard/default-v1" },
+          {
+            id: "legacy-default",
+            title: "Default V1",
+            url: "/dashboard/default-v1",
+          },
           { id: "legacy-crm", title: "CRM V1", url: "/dashboard/crm-v1" },
-          { id: "legacy-finance", title: "Finance V1", url: "/dashboard/finance-v1" },
-          { id: "legacy-analytics", title: "Analytics V1", url: "/dashboard/analytics-v1" },
+          {
+            id: "legacy-finance",
+            title: "Finance V1",
+            url: "/dashboard/finance-v1",
+          },
+          {
+            id: "legacy-analytics",
+            title: "Analytics V1",
+            url: "/dashboard/analytics-v1",
+          },
         ],
       },
     ],
@@ -235,7 +484,7 @@ export const sidebarItems: NavGroup[] = [
         url: "/dashboard/coming-soon",
         icon: SquareArrowUpRight,
         badge: "soon",
-        disabled: true,
+        disabled: false,
       },
     ],
   },

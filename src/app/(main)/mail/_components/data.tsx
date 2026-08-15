@@ -2,8 +2,8 @@ import { Archive, CircleHelp, File, Inbox, Keyboard, type LucideIcon, Send, Star
 import { siFigma, siGoogledocs, siGooglephotos } from "simple-icons";
 
 const arhamKhan = {
-  name: "Arham Khan",
-  email: "hello@arhamkhnz.com",
+  name: "Mugenzi Jean Marie Vianney",
+  email: "mdesignpro10@gmail.com",
 };
 
 const weblabsStudio = {
@@ -470,8 +470,8 @@ export const mailNavigation: MailNavigation = {
 export const accounts = [
   {
     id: 1,
-    label: "Arham Khan",
-    email: "hello@arhamkhnz.com",
+    label: "Mugenzi Jean Marie Vianney",
+    email: "mdesignpro10@gmail.com",
   },
   {
     id: 2,
